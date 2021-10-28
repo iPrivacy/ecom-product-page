@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+$primary-orange: hsl(26, 100%, 55%);
+$primary-pale-orange: hsl(25, 100%, 94%);
+$dark-blue: hsl(220, 13%, 13%);
+$dark-gray-blue: hsl(219, 9%, 45%);
+$gray-blue: hsl(220, 14%, 75%);
+$light-gray-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // use 75% for lightbox background
+
+.mainModal{
+  position: absolute;
+  margin: 0px -66px;
+  top: 0;
+}
+
+.modalOverlay{
+    background-color: $black;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    opacity: 80%;
+    
+}
+.modalContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    .modal{
+        position: absolute;
+        height: 90vh;
+        width: 35vw;
+        padding: 10px 30px;
+
+        .closeButton{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                position: relative;
+                height: 16px;
+                width: 16px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+
+        .productContainer{
+            padding: 30px 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            .mainImageDiv{
+                display: flex;
+                height: 100%;
+                align-items: center;
+                .imageWrapper{
+                    width: 100%;
+                    height: 95%;
+                    position: relative;
+                    .mainImage{
+                      border-radius: 15px;
+                      object-fit: cover;
+                      object-position: top;
+                    }
+                  }
+            }
+
+            .btnPrev{
+                height: 30px;
+                width: 30px;
+                padding: 10px;
+                left: 15px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 50;
+                border: none;
+                cursor: pointer;
+                
+                .prevBtn{
+                  object-fit: none;
+                }
+                
+            }
+            .btnNext{
+              height: 30px;
+                width: 30px;
+                padding: 10px;
+                right: 15px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 50;
+                border: none;
+                cursor: pointer;
+
+                .nextBtn{
+                  object-fit: none;
+                }
+            }
+        
+            
+            .thumbnailContainer{
+              width: 100%;
+              position: relative;
+              height: 20%;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr; 
+              grid-template-rows: 1fr; 
+              gap: 0px 12px; 
+              padding: 5px 30px;
+              .thumbnailWrapper{
+                width: 100%;
+                position: relative;
+                .thumbnail{
+                  border-radius: 15px;
+                  object-position: top;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        
+    }
+}

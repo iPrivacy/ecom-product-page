@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+$primary-orange: hsl(26, 100%, 55%);
+$primary-pale-orange: hsl(25, 100%, 94%);
+$dark-blue: hsl(220, 13%, 13%);
+$dark-gray-blue: hsl(219, 9%, 45%);
+$gray-blue: hsl(220, 14%, 75%);
+$light-gray-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // use 75% for lightbox background
+
+.section{
+  height: calc( 88vh - 120px);
+  width: 100%;
+  margin: 60px 0px 60px 0px;
+  display: flex;
+
+  .productContainer{
+    width: 50%;
+    padding: 0px 82px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .imageWrapper{
+      width: 100%;
+      height: 75%;
+      position: relative;
+      .mainImage{
+        border-radius: 15px;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    .thumbnailContainer{
+      width: 100%;
+      position: relative;
+      height: 20%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 1fr; 
+      gap: 0px 12px; 
+      .thumbnailWrapper{
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+          opacity: 65%;
+        }
+        &:active{
+          border: 2px solid $primary-orange;
+          border-radius: inherit;
+        }
+        .thumbnail{
+          border-radius: 15px;
+          object-position: top;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .detailsContainer{
+    height: 100%;
+    width: 50%;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    h4{
+      text-transform: uppercase;
+      color: $primary-orange;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    h1{
+      font-weight: 700;
+      font-size: 3.1rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    p{
+      font-size: 16px;
+      color: $gray-blue;
+      line-height: 25px;
+    }
+
+    .priceContainer{
+      .discountPriceWrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        span{
+          font-size: 25px;
+          font-weight: 700;
+          color: $black;
+          margin: 0;
+        }
+        h4{
+          font-size: 15px;
+          background-color: $primary-pale-orange;
+          margin: 0px 0px 0px 15px;
+          padding: 2px 4px;
+          color: $primary-orange;
+          border-radius: 5px;
+        }
+        
+      }
+      .priceWrapper{
+        margin-top: 10px;
+        span{
+          color: $gray-blue;
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    .buttonContainer{
+      margin-top: 20px;
+      display: flex;
+      width: 75%;
+      .counterWrapper{
+        width: 25%;
+        background-color: $light-gray-blue;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        align-items: center;
+        border-radius: 5px;
+        button{
+          cursor: pointer;
+        }
+        span{
+          font-weight: bolder;
+        }
+        .icons{
+          position: relative;
+          width: 10px;
+          height: 15px;
+          padding: 5px;
+          background-color: transparent;
+          border: none;
+          .image{
+            object-fit: contain;
+          }
+        }
+      }
+      .addToCart{
+        width: 50%;
+        background-color: $primary-orange;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        justify-content: center;
+        padding: 6px 0px;
+        margin-left: 10px;
+        // filter: drop-shadow(0px 5px 4px $primary-orange);
+        box-shadow: 0px 14px 38px -9px $primary-orange;
+        border: none;
+        cursor: pointer;
+        span{
+          color: white;
+          margin-left: 10px;
+          font-size: 10px;
+          font-weight: 700;
+        }
+        
+        .cart{
+          position: relative;
+          width: 10px;
+          height: 10px;
+          border: none;
+          .image{
+              object-fit: contain;
+          }
+      }
+      }
+    }
+  }
+}

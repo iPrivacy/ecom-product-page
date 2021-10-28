@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+$primary-orange: hsl(26, 100%, 55%);
+$primary-pale-orange: hsl(25, 100%, 94%);
+$dark-blue: hsl(220, 13%, 13%);
+$dark-gray-blue: hsl(219, 9%, 45%);
+$gray-blue: hsl(220, 14%, 75%);
+$light-gray-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // use 75% for lightbox background
+
+
+.nav{
+    font-family: 'Kumbh Sans', sans-serif;
+    width:100%;
+    height: 12vh;
+    border-bottom: solid 2px $gray-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .container{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logoWrapper{
+            position: relative;
+            width: 25%;
+            height: 100%;
+            .image{
+                object-fit: contain;
+            }
+        }
+        .links{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 70%;
+            height: 100%;
+            a{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                color: $gray-blue;
+                &:hover{
+                    border-bottom: solid 2px $primary-orange;
+                    color: $dark-gray-blue;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .profileContainer{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        .cart{
+            position: relative;
+            width: 16px;
+            height: 16px;
+            margin: 0px 20px 0px 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            .image{
+                object-fit: contain;
+            }
+        }
+        .userImage{
+            position: relative;
+            width: 7%;
+            height: 50%;
+            border: solid 2px $primary-orange;
+            border-radius: 50%;
+            .image{
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+.cartModal{
+    width: 25%;
+    right: 66px;
+    height: 250px;
+    position: absolute;
+    margin-top: -5px;
+    background-color: $white;
+    border-radius: 6px;
+    padding: 10px 0px;
+    // box-shadow: 0px 9px 41px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 12px 38px -17px rgb(0 ,0 ,0 , 75%);
+    z-index: 1000;
+
+
+    .title{
+        width: 100%;
+        padding: 10px 0px 20px 10px;
+        border-bottom: 2px solid $gray-blue;
+
+        h1{
+            font-size: 16px;
+            margin: 0%;
+            font-family: 'Kumbh', sans-serif;
+        }
+    }
+}
